@@ -1,0 +1,61 @@
+/* --------------- tc-chooseUs-style41 --------------- */
+.tc-chooseUs-style41{
+    padding: 120px 0;
+    background-image: url(../img/choose_back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .img{
+        filter: drop-shadow( 0 0 30px #fff2 );
+        transition: all 0.4s linear;
+    }
+
+    .info{
+        .choose-cards{
+            display: flex;
+            flex-wrap: wrap;
+
+            .item{
+                display: flex;
+                align-items: center;
+
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 30px;
+                    margin-inline-end: 15px;
+                    flex-shrink: 0;
+                    background: var(--bg-grad2);
+                }
+            }
+        }
+
+        .choose-foot{
+            padding-top: 20px;
+            border-top: 1px solid #fff2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p{
+                color: #888194;
+                font-size: 14px;
+            }
+
+            h5{
+                font-size: 30px;
+            }
+
+            .logo{
+                width: 100px;
+            }
+        }
+    }
+
+ }
+ 
+ @media screen and (max-width: 991px){
+
+ }

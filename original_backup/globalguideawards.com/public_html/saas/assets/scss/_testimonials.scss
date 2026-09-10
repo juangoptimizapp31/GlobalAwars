@@ -1,0 +1,133 @@
+/* --------------- tc-testimonials-style41 --------------- */
+.tc-testimonials-style41{
+    position: relative;
+    padding: 120px 0 0;
+    background-color: #11032b;
+
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(to top , #ffffff1f , transparent);
+    }
+
+    .arrows{
+        position: relative;
+        display: flex;
+
+        a{
+            width: 55px;
+            height: 55px;
+            line-height: 53px;
+            border-radius: 50%;
+            border: 1px solid #fff2;
+            text-align: center;
+            margin-inline-end: 10px;
+            font-size: 14px;
+            color: #fff;
+
+            &:hover{
+                background: var(--bg-grad2);
+            }
+        }
+    }
+
+    .testi-card{
+        padding: 30px;
+        background-color: #180739;
+        margin-top: 20px;
+
+        .stars{
+            font-size: 12px;
+            margin-bottom: 20px;
+            color: var(--color-blue8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: var(--bg-grad2);  
+            display: inline-block;
+            i{
+                margin: 0 3px 0 0; 
+            }
+        }
+
+        .client-det{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .social-icon{
+                font-size: 18px;
+                color: var(--color-blue8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: var(--bg-grad2);  
+                display: inline-block;
+            }
+        }
+    }
+
+    .newsletter{
+        position: relative;
+        margin-top: 120px;
+        z-index: 10;
+
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #090118;
+        }
+
+        .letter{
+            width: 100%;
+            height: 400px;
+            min-height: 100%;
+        }
+
+        .newsletter-card{
+            padding: 100px;
+            background-image: linear-gradient( 90deg, #80a9d5 0%, #725ce0 100%);
+            // height: 100%;
+
+            .form{
+                position: relative;
+                text-align: center;
+
+                .form-control{
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 50px;
+                    background-color: #fff2;
+                    border: 1px solid #fff5;
+                    color: #fff;
+                    padding: 15px;
+                    text-align: center;
+                    &::placeholder{
+                        color: #ffffff71;
+                    }
+                }
+            }
+        }
+    }
+
+ }
+ 
+ @media screen and (max-width: 991px){
+    .tc-testimonials-style41 {
+        .newsletter {
+            .letter {
+                display: none;
+            }
+            .newsletter-card{
+                padding: 50px 15px;
+                border-radius: 15px;
+            }
+        }
+    }
+ }

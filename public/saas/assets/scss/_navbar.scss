@@ -1,0 +1,48 @@
+/* --------------- navbar style41 --------------- */
+.navbar.style41{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 99;
+
+    .container{
+        padding: 20px 0;
+        border-bottom: 1px solid #fff2;
+    }
+
+
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: #9e92b4;
+                margin: 0 20px;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .navbar.style41{
+        position: relative;
+        .navbar-brand{
+            width: calc(100% - 80px);
+            padding-inline-end: 15px;
+        }
+        .container{
+            padding: 20px 15px;
+        }
+    }
+}

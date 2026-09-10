@@ -1,0 +1,82 @@
+/* --------------- tc-partners-style41 --------------- */
+.tc-partners-style41{
+    padding: 140px 0 0;
+    position: relative;
+    overflow: hidden;
+
+    .logos_light{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+        object-position: top center;
+    }
+    
+    .container{
+        position: relative;
+        z-index: 10;
+    }
+
+    .logos{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+
+        .logo{
+            width: calc(20% - 40px);
+            margin: 40px 20px 0;
+            height: 80px;
+            border: 1px solid #fff3;
+            border-radius: 10px;
+            padding: 25px 10px;
+            text-align: center;
+            opacity: 0.4;
+            &:hover{
+                opacity: 1;
+                border-color: var(--color-blue8);
+                background-color: #fff1;
+            }
+        }
+    }
+
+    .curved-text{
+        margin-top: 60px;
+        
+        .hidden {
+            position: absolute;
+            pointer-events: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .svgtext {
+            flex: none;
+            position: relative;
+            left: -40%;
+        }
+
+        .svgtext text {
+            fill: #7779dc;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            word-spacing: 5px;
+            letter-spacing: 1px;
+            font-family: 'Syne', sans-serif;
+        }
+
+    }
+
+ }
+ 
+ @media screen and (max-width: 991px){
+    .tc-partners-style41 {
+        .logos .logo {
+            width: calc(30% - 20px);
+            margin: 20px 10px 0;
+        }
+    }
+ }
