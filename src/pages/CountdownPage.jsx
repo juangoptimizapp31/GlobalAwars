@@ -316,13 +316,17 @@ function CountdownPage() {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: 0;
+            z-index: 1;
+            display: block;
           }
+
           .video-wrap video {
-            width: 120%;
+            display: block;
+            width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: translateX(10%);
+            opacity: 1;
+            visibility: visible;
           }
           
           @media (max-width: 991px) {
@@ -689,18 +693,7 @@ function CountdownPage() {
             ESTADOS DEL EVENTO
           ========================================================= */
 
-          .gga-event-states {
-            position: relative;
-            z-index: 20;
-
-            width: 100%;
-            max-width: 1280px;
-
-            margin: 0 auto;
-            padding: 35px 30px 20px;
-
-            box-sizing: border-box;
-          }
+          
 
           .gga-event-title {
             width: 100%;
@@ -1100,323 +1093,7 @@ function CountdownPage() {
               );
           }
 
-          /* =========================================================
-          PENDÓN LATERAL
-          ========================================================= */
-
-        .gga-side-pendon {
-          position: absolute;
-          left: 24px;
-          top: 30px;
-          width: 300px;
-          z-index: 9999;
-
-          display: flex;
-          flex-direction: column;
-
-          background: #050505;
-          border: 1px solid #d9a928;
-
-          box-shadow:
-            0 0 15px rgba(217, 169, 40, 0.25),
-            0 0 35px rgba(217, 169, 40, 0.12);
-
-          /* No deformar el contenido */
-          overflow: visible;
-        }
-
-        /* =========================================
-          EFECTO ROLLO / DESENROLLADO
-          ========================================= */
-
-        .gga-side-pendon::before {
-          content: "";
-          position: absolute;
-
-          top: -12px;
-          left: -8px;
-
-          width: calc(100% + 16px);
-          height: 24px;
-
-          background: linear-gradient(
-            to bottom,
-            #8b6818 0%,
-            #d9a928 35%,
-            #f0cf69 50%,
-            #b88620 70%,
-            #70500f 100%
-          );
-
-          border-radius: 12px;
-
-          box-shadow:
-            0 3px 8px rgba(0, 0, 0, 0.7),
-            inset 0 2px 3px rgba(255,255,255,0.35);
-
-          z-index: 20;
-
-          transform-origin: center;
-          animation: rolloAparece 0.5s ease-out forwards;
-        }
-
-
-        /* LA TELA SE DESENROLLA DESDE EL ROLLO */
-        .gga-side-pendon {
-          clip-path: inset(0 0 100% 0);
-
-          animation: pendonDesenrollado 2.2s
-            cubic-bezier(0.22, 0.61, 0.36, 1)
-            0.35s forwards;
-        }
-
-
-        /* PEQUEÑO MOVIMIENTO DEL ROLLO */
-        @keyframes rolloAparece {
-
-          0% {
-            transform: scaleX(0.2);
-            opacity: 0;
-          }
-
-          70% {
-            transform: scaleX(1.08);
-            opacity: 1;
-          }
-
-          100% {
-            transform: scaleX(1);
-            opacity: 1;
-          }
-        }
-
-
-        /* DESENROLLADO VERTICAL */
-        @keyframes pendonDesenrollado {
-
-          0% {
-            clip-path: inset(0 0 100% 0);
-          }
-
-          10% {
-            clip-path: inset(0 0 92% 0);
-          }
-
-          25% {
-            clip-path: inset(0 0 72% 0);
-          }
-
-          45% {
-            clip-path: inset(0 0 48% 0);
-          }
-
-          65% {
-            clip-path: inset(0 0 27% 0);
-          }
-
-          82% {
-            clip-path: inset(0 0 8% 0);
-          }
-
-          94% {
-            clip-path: inset(0 0 2% 0);
-          }
-
-          100% {
-            clip-path: inset(0 0 0 0);
-          }
-        } 
-
-        @keyframes desenrollarPendon {
-
-          /* ENROLLADO ARRIBA */
-          0% {
-            transform:
-              perspective(900px)
-              rotateX(75deg)
-              scaleY(0.04)
-              translateY(-8px);
-
-            clip-path: inset(0 0 96% 0);
-            opacity: 0;
-          }
-
-          /* APARECE EL ROLLO */
-          12% {
-            opacity: 1;
-
-            transform:
-              perspective(900px)
-              rotateX(55deg)
-              scaleY(0.12)
-              translateY(0);
-
-            clip-path: inset(0 0 88% 0);
-          }
-
-          /* EMPIEZA A CAER */
-          35% {
-            transform:
-              perspective(900px)
-              rotateX(25deg)
-              scaleY(0.40)
-              translateY(0);
-
-            clip-path: inset(0 0 60% 0);
-          }
-
-          /* SE DESENROLLA */
-          65% {
-            transform:
-              perspective(900px)
-              rotateX(8deg)
-              scaleY(0.72)
-              translateY(0);
-
-            clip-path: inset(0 0 28% 0);
-          }
-
-          /* CASI COMPLETO */
-          85% {
-            transform:
-              perspective(900px)
-              rotateX(2deg)
-              scaleY(1.02)
-              translateY(0);
-
-            clip-path: inset(0 0 4% 0);
-          }
-
-          /* QUEDA EN SU SITIO */
-          100% {
-            transform:
-              perspective(900px)
-              rotateX(0deg)
-              scaleY(1)
-              translateY(0);
-
-            clip-path: inset(0 0 0 0);
-            opacity: 1;
-          }
-        }
-        /* Estados verticales */
-        .gga-side-pendon .gga-event-states {
-          width: 100%;
-          padding: 20px 15px;
-          margin: 0;
-          position: relative;
-        }
-
-        /* Título */
-        .gga-side-pendon .gga-event-title {
-          margin-bottom: 15px;
-          gap: 8px;
-        }
-
-        .gga-side-pendon .gga-event-title h2 {
-          font-size: 10px;
-          letter-spacing: 1px;
-        }
-
-        /* Tarjetas una debajo de otra */
-        .gga-side-pendon .gga-states-row {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          gap: 8px;
-        }
-
-        /* Tarjetas */
-        .gga-side-pendon .gga-state-card {
-          width: 100%;
-          height: 72px;
-          padding: 8px 10px;
-          gap: 9px;
-        }
-
-        /* Iconos */
-        .gga-side-pendon .gga-state-icon {
-          width: 34px;
-          height: 34px;
-          min-width: 34px;
-          font-size: 16px;
-        }
-
-        /* Texto */
-        .gga-side-pendon .gga-state-info h3 {
-          font-size: 11px;
-        }
-
-        .gga-side-pendon .gga-state-info strong {
-          font-size: 8px;
-          margin-bottom: 2px;
-        }
-
-        .gga-side-pendon .gga-state-info p {
-          font-size: 7px;
-        }
-
-        /* Flechas hacia abajo */
-        .gga-side-pendon .gga-state-arrow {
-          transform: rotate(90deg);
-          height: 12px;
-          font-size: 16px;
-        }
-
-        /* Campaña debajo */
-        .gga-side-pendon .gga-campaign {
-          width: 100%;
-          height: auto;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          border-left: 0;
-          border-right: 0;
-          border-bottom: 0;
-          border-radius: 0;
-        }
-
-        /* Campaña */
-        .gga-side-pendon .gga-campaign-content {
-          padding: 15px;
-        }
-
-        .gga-side-pendon .gga-campaign-content h2 {
-          font-size: 15px;
-        }
-
-        .gga-side-pendon .gga-campaign-content p {
-          font-size: 8px;
-        }
-
-        /* Fecha */
-        .gga-side-pendon .gga-campaign-date {
-          padding: 12px;
-          border-left: 0;
-          border-right: 0;
-          border-top: 1px solid rgba(197,157,76,.22);
-          border-bottom: 1px solid rgba(197,157,76,.22);
-        }
-
-        /* Imagen */
-        .gga-side-pendon .gga-campaign-image {
-          height: 130px;
-        }
-
-        /* Punta inferior */
-        .gga-side-pendon::after {
-          content: "";
-          position: absolute;
-          bottom: -35px;
-          left: 0;
-          width: 0;
-          height: 0;
-          border-left: 150px solid transparent;
-          border-right: 150px solid transparent;
-          border-top: 35px solid #d9a928;
-          z-index: -1;
-        }
-
+          
 
           /* =========================================================
             CONTENEDOR PRINCIPAL
@@ -1649,10 +1326,8 @@ function CountdownPage() {
           </video>
         </div>
       </section>
-      {/* =========================================
-            PENDÓN LATERAL
-        ========================================= */}
 
+      {/* PENDÓN */}
       <div className="gga-side-pendon">
 
         {/* ESTADOS DEL EVENTO */}
@@ -1785,6 +1460,7 @@ function CountdownPage() {
           </div>
 
         </section>
+
 
       </div>
 
