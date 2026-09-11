@@ -22074,3 +22074,14 @@ a.content__text-link[data-fx="14"]:hover::after {
       text-align: left;
     }
   }
+
+  @media (max-width: 768px) {
+    .mission-vision-text {
+      position: static !important;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      width: 100% !important;
+      margin-top: 25px !important;
+    }
+  }

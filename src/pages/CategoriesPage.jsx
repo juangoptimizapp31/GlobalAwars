@@ -89,8 +89,8 @@ function CategoriesPage() {
   return (
     <div className="home-style10 f-fm-jakarta">
       {/* =====================================================
-          INTRO CINEMATOGRÁFICA
-        ===================================================== */}
+        INTRO CINEMATOGRÁFICA
+    ===================================================== */}
       {introPhase !== 'finished' && (
         <div
           style={{
@@ -104,10 +104,9 @@ function CategoriesPage() {
             overflow: 'hidden',
           }}
         >
-
           {/* =========================
             FASE 1 — IMAGEN
-          ========================= */}
+        ========================= */}
           {introPhase === 'video' && (
             <video
               ref={introVideoRef}
@@ -132,9 +131,8 @@ function CategoriesPage() {
           )}
 
           {/* =========================
-              FASE 2 — IDENTIDAD
-            ========================= */}
-
+            FASE 2 — IDENTIDAD
+        ========================= */}
           {introPhase === 'title' && (
             <div
               style={{
@@ -145,7 +143,6 @@ function CategoriesPage() {
                 animation: 'ggaIntroTitle 1.2s ease forwards',
               }}
             >
-
               <div
                 style={{
                   fontSize: '13px',
@@ -188,32 +185,78 @@ function CategoriesPage() {
               >
                 Awards
               </div>
-
             </div>
           )}
-
-          <style>
-            {`
-              @keyframes ggaIntroTitle {
-                from {
-                  opacity: 0;
-                  transform: scale(0.96);
-                  filter: blur(10px);
-                }
-
-                to {
-                  opacity: 1;
-                  transform: scale(1);
-                  filter: blur(0);
-                }
-              }
-            `}
-
-          </style>
-
-
         </div>
       )}
+
+      {/* =====================================================
+        ESTILOS DEL INTRO + MISIÓN / VISIÓN
+    ===================================================== */}
+      <style>
+        {`
+        @keyframes ggaIntroTitle {
+          from {
+            opacity: 0;
+            transform: scale(0.96);
+            filter: blur(10px);
+          }
+
+          to {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
+          }
+        }
+
+        @media (max-width: 768px) {
+
+          .mission-vision-title {
+            margin-left: 0 !important;
+            width: 100% !important;
+            padding-top: 0 !important;
+            text-align: center !important;
+          }
+
+          .mission-vision-title h2 {
+            font-size: 38px !important;
+            line-height: 1.1 !important;
+          }
+
+          .mission-vision-text {
+            position: static !important;
+            left: auto !important;
+            right: auto !important;
+            top: auto !important;
+            width: 100% !important;
+            margin-top: 25px !important;
+            text-align: center !important;
+          }
+
+          .mission-vision-text p {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+          }
+
+          .mission-vision-icon {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            right: auto !important;
+            transform: none !important;
+            width: 90px !important;
+            height: 90px !important;
+            margin: 0 auto 25px !important;
+          }
+
+          .mission-vision-icon i {
+            font-size: 38px !important;
+          }
+        }
+      `}
+      </style>
+
+
       {/* start navbar */}
       <div className="navbar-container style13">
         <div className="container">
@@ -313,7 +356,7 @@ function CategoriesPage() {
               <div className="col-lg-5">
                 <div className="info d-inline-block px-4 mt-4 mt-lg-0 wow fadeInRight" data-wow-delay="0.2s">
                   <div className="tc-section-title-style25 mb-30">
-                    <h2> Donde la Innovación se <span className="color-light3"> encuentra </span> <br /> con la <span className="span_circle f-fm-Playfair fst-italic fw-400"> cratividad </span> </h2>
+                    <h2> Donde la Innovación se <span className="color-light3"> encuentra </span> <br /> con la <span className="span_circle f-fm-Playfair fst-italic fw-400"> creatividad </span> </h2>
                   </div>
                   <div className="text mb-50">
                     Prepárate para conocer a quienes están transformando sus industrias con pasión y originalidad. <br />
@@ -528,7 +571,7 @@ function CategoriesPage() {
                 {activeTab === 'pills-prt1' && (
                   <div className="gga-main-categories gga-subcategories">
 
-                    <Link to="/categorias/artes-plastic" className="gga-main-category">
+                    <a href="/categorias/artes-plastic" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/ArtesPls5.jpg"
@@ -546,9 +589,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/madera-tallada" className="gga-main-category">
+                    <a href="/categorias/madera-tallada" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/madera tallada.jpg"
@@ -566,9 +609,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/fotografo creativo" className="gga-main-category">
+                    <a href="/categorias/fotografo creativo" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/fotografo creativo.jpg"
@@ -586,9 +629,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/diseño-de-moda" className="gga-main-category">
+                    <a href="/categorias/diseño-de-moda" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/DiseñoM2.jpg"
@@ -606,9 +649,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/accesorios-de-moda" className="gga-main-category">
+                    <a href="/categorias/accesorios-de-moda" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/accesorios de moda.jpg"
@@ -626,9 +669,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/madera-torneada" className="gga-main-category">
+                    <a href="/categorias/madera-torneada" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/madera-torno.png"
@@ -646,9 +689,8 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
-
-                    <Link to="/categorias/alfareria" className="gga-main-category">
+                    </a>
+                    <a href="/categorias/alfareria" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/alfareria (1).jpg"
@@ -666,7 +708,7 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
                   </div>
                 )}
@@ -675,7 +717,7 @@ function CategoriesPage() {
                 {activeTab === 'pills-prt2' && (
                   <div className="gga-main-categories gga-subcategories">
 
-                    <Link to="/categorias/empr-colombiano" className="gga-main-category">
+                    <a href="/categorias/empr-colombiano" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/emprendedorColombianjpg.png"
@@ -693,9 +735,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-hodur" className="gga-main-category">
+                    <a href="/categorias/empr-hodur" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/HONDUREEEEno.jpg"
@@ -713,9 +755,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-mexic" className="gga-main-category">
+                    <a href="/categorias/empr-mexic" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/emprededorMexican.jpg"
@@ -733,9 +775,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-guatem" className="gga-main-category">
+                    <a href="/categorias/empr-guatem" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/emprendedorGuatemalteco.jpg"
@@ -753,9 +795,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-chilen" className="gga-main-category">
+                    <a href="/categorias/empr-chilen" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/chile.jpg"
@@ -773,9 +815,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-salvad" className="gga-main-category">
+                    <a href="/categorias/empr-salvad" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/salvador.jpg"
@@ -793,9 +835,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/empr-argent" className="gga-main-category">
+                    <a href="/categorias/empr-argent" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/argentina.jpg"
@@ -813,7 +855,7 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
                   </div>
                 )}
@@ -822,7 +864,7 @@ function CategoriesPage() {
                 {activeTab === 'pills-prt3' && (
                   <div className="gga-main-categories gga-subcategories">
 
-                    <Link to="/categorias/cuidado-pers" className="gga-main-category">
+                    <a href="/categorias/cuidado-pers" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/cuidado personal.jpg"
@@ -840,9 +882,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/fundaciones" className="gga-main-category">
+                    <a href="/categorias/fundaciones" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/fundacion.jpg"
@@ -860,9 +902,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/gastron-artes" className="gga-main-category">
+                    <a href="/categorias/gastron-artes" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/GastroArtes5.jpg"
@@ -880,9 +922,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/tabaco" className="gga-main-category">
+                    <a href="/categorias/tabaco" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/Tbaco3.jpg"
@@ -900,9 +942,9 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
-                    <Link to="/categorias/agricultura" className="gga-main-category">
+                    <a href="/categorias/agricultura" className="gga-main-category">
                       <div className="gga-main-category-image">
                         <img
                           src="/assets/img/home_10/porfolio/agricultura.jpg"
@@ -920,7 +962,7 @@ function CategoriesPage() {
                           Ver nominados <span>→</span>
                         </span>
                       </div>
-                    </Link>
+                    </a>
 
                   </div>
                 )}
@@ -1078,6 +1120,7 @@ function CategoriesPage() {
 
               {/* icono */}
               <div
+                className="mission-vision-icon"
                 style={{
                   position: "absolute",
                   left: "45px",
@@ -1105,6 +1148,7 @@ function CategoriesPage() {
 
               {/* título */}
               <div
+                className="mission-vision-title"
                 style={{
                   marginLeft: "150px",
                   width: "30%"
@@ -1146,6 +1190,7 @@ function CategoriesPage() {
 
               {/* texto */}
               <div
+                className="mission-vision-text"
                 style={{
                   position: "absolute",
                   left: "43%",
@@ -1230,6 +1275,7 @@ function CategoriesPage() {
 
               {/* icono */}
               <div
+                className="mission-vision-icon"
                 style={{
                   position: "absolute",
                   left: "45px",
@@ -1257,6 +1303,7 @@ function CategoriesPage() {
 
               {/* título */}
               <div
+                className="mission-vision-title"
                 style={{
                   marginLeft: "150px",
                   width: "30%",
@@ -1299,6 +1346,7 @@ function CategoriesPage() {
 
               {/* texto */}
               <div
+                className="mission-vision-text"
                 style={{
                   position: "absolute",
                   left: "43%",
