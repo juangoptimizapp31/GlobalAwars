@@ -327,6 +327,7 @@ function CountdownPage() {
             object-fit: cover;
             opacity: 1;
             visibility: visible;
+            transform: translateX(20%);
           }
           
           @media (max-width: 991px) {

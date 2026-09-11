@@ -121,6 +121,7 @@ function CategoriesPage() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: '65% center',
               }}
             >
               <source
@@ -1423,7 +1424,8 @@ function CategoriesPage() {
             <div className="row">
               <div className="col-lg-3">
                 <div className="logo text-lg-start">
-                  <img src="/assets/img/LogoPremioLado.png" alt="" />
+                  <img
+                    src="/assets/img/LogoPremioLado.png" alt="" />
                 </div>
               </div>
               <div className="col-lg-6">
